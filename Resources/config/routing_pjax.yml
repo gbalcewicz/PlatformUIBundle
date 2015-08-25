@@ -136,3 +136,12 @@ admin_roleDelete:
     methods: [POST]
     defaults:
         _controller: ezsystems.platformui.controller.role:deleteRoleAction
+
+admin_roleAssignmentDelete:
+    path: /role/deleteusergrouproleassignment/{roleAssignmentId}/{redirectErrorsTo}
+    methods: [POST]
+    defaults:
+        _controller: ezsystems.platformui.controller.role:deleteRoleAssignmentAction
+        redirectErrorsTo: view
+    requirements:
+        redirectErrorsTo: (list|view)
