@@ -346,6 +346,11 @@ YUI.add('ez-richtext-editview', function (Y) {
             toolbarsConfig: {
                 value: {
                     styles: {
+                        canStyleElement: function (element) {
+                            // TODO check editable or if the element
+                            // is holding an ezembed widget
+                            return true;
+                        },
                         selections: [
                             ToolbarConfig.Link,
                             ToolbarConfig.Text,
